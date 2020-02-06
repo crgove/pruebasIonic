@@ -1,5 +1,7 @@
 {
   "name": "repasoIonic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let producto of productosTecnologia">
+    <ion-card-header>
+       <ion-card-title>Producto: {{producto.nombre}} ({{producto.precio}} €)</ion-card-title>
+       <ion-card-title>Es favorito: {{producto.favorito}}</ion-card-title>
+    </ion-card-header>
+    <div style="margin-top: -20%;">
+      <ion-button (click)="AnyadirfavoritosTecnologia(producto.key, producto.favorito)" expand="full" color="light" style="margin-top: 25%;">AÑADIR A FAVORITOS</ion-button>
+    </div>
+    <div style="margin-top: -20%;">
+      <ion-button (click)="modificarNombre(producto.nombre)" expand="full" color="light" style="margin-top: 25%;">CAMBIAR NOMBRE</ion-button>
+    </div>
+  </ion-card>
+
+
+
+
+
+  <ion-card *ngFor="let producto of productosHogar">
+    <ion-card-header>
+       <ion-card-title>Producto: {{producto.nombre}} ({{producto.precio}} €)</ion-card-title>
+       <ion-card-title>Es favorito: {{producto.favorito}}</ion-card-title>
+    </ion-card-header>
+    <div style="margin-top: -20%;"><ion-button (click)="AnyadirfavoritosHogar(producto.key, producto.favorito)" expand="full" color="light" style="margin-top: 25%;">AÑADIR A FAVORITOS</ion-button>
+    </div>
+  </ion-card>
+
+</ion-content>

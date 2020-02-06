@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let producto of productosFavoritos">
+    <ion-card-header>
+       <ion-card-title>Producto: {{producto.nombre}} ({{producto.precio}} €)</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
